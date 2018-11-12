@@ -7,7 +7,8 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/cassie/Cassie/devel:$CMAKE_PREFIX_PATH"
-export PWD="/home/cassie/Cassie/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/cassie/Cassie/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/home/cassie/Cassie/src:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/cassie/HybridLab/Cassie/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/cassie/HybridLab/Cassie/devel/lib:$LD_LIBRARY_PATH"
+export PWD="/home/cassie/HybridLab/Cassie/build"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/cassie/HybridLab/Cassie/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/cassie/Cassie/src:/home/cassie/HybridLab/Cassie/src:$ROS_PACKAGE_PATH"

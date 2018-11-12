@@ -1,2 +1,2 @@
-
--DCATKIN_DEVEL_PREFIX=/home/cassie/Cassie/devel -DCMAKE_INSTALL_PREFIX=/home/cassie/Cassie/install -G Unix Makefiles
+comms
+-DCATKIN_DEVEL_PREFIX=/home/cassie/HybridLab/Cassie/devel -DCMAKE_INSTALL_PREFIX=/home/cassie/HybridLab/Cassie/install -G Unix Makefiles

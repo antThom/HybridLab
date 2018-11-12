@@ -1,0 +1,8 @@
+prefix=/home/cassie/HybridLab/Cassie/devel
+
+Name: comms
+Description: Description of comms
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/cassie/HybridLab/Cassie/devel/lib 
+Requires: 

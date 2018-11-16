@@ -1,0 +1,8 @@
+prefix=/home/cassie/HybridLab/ROSNET/devel
+
+Name: comms
+Description: Description of comms
+Version: 0.1.0
+Cflags: -I/home/cassie/HybridLab/ROSNET/devel/include
+Libs: -L/home/cassie/HybridLab/ROSNET/devel/lib 
+Requires: message_runtime

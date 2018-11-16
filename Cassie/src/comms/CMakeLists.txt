@@ -127,6 +127,18 @@ include_directories(
 add_executable(udpuserRos src/udpuserRos.c)
 target_link_libraries(udpuserRos $(catkin_LIBRARIES))
 add_dependencies(udpuserRos comms_generate_messages_cpp)
+
+add_executable(udpuser src/udpuser.c)
+target_link_libraries(udpuser $(catkin_LIBRARIES))
+add_dependencies(udpuser comms_generate_messages_cpp)
+
+add_executable(talker src/rosNet/talker.cpp)
+target_link_libraries(talker $(catkin_LIBRARIES))
+add_dependencies(talker comms_generate_messages_cpp)
+
+add_executable(listener src/rosNet/listener.cpp)
+target_link_libraries(listener $(catkin_LIBRARIES))
+add_dependencies(listener comms_generate_messages_cpp)
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/comms.cpp

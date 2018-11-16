@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/talker.dir/src/rosNet/talker.cpp.o  -o devel/lib/comms/talker -rdynamic $(catkin_LIBRARIES) 

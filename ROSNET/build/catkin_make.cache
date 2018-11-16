@@ -1,0 +1,2 @@
+comms
+-DCATKIN_DEVEL_PREFIX=/home/cassie/HybridLab/ROSNET/devel -DCMAKE_INSTALL_PREFIX=/home/cassie/HybridLab/ROSNET/install -G Unix Makefiles

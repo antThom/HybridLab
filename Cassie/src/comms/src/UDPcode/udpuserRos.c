@@ -24,6 +24,7 @@
 #include "cassie_user_in_t.h"
 #include "udp.h"
 #include "ros/ros.h" //Add the ros libraries 
+#include "std_msg/Int16.h" //Add the message type of the messages that get published
 
 
 // Dummy controller that outputs zeros
@@ -32,13 +33,23 @@ static void null_controller(const cassie_out_t *out, cassie_user_in_t *in)
     memset(in, 0, sizeof (cassie_user_in_t));
 }
 
-
+// This Code will subscribe to other topics, collect incoming data, and
+// will send it to the real-time computer
+int sensorCallback(const std_msgs::Int16::ConstPtr& msg)
+{
+    int sen = msg;
+    //return sen;
+}
 int main()
 {
     // Initialize the ros node
-    ros::init("UDP_Sender");
+    ros::init("AddSensorDate");
     // Create the Node Handle
     ros::NodeHandle n;
+
+    // Create a subscriber to listen to the SENSOR topic. call the sensorCallack function when a message arrives
+    ros::subscriber sensor = n.subscribe("SENSOR",1000, sensorCallback);
+    ros::spin();
     // Connect user computer to target computer
     int sock = udp_init_client("10.10.10.3", "25000",
                                "10.10.10.100", "25001");

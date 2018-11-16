@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  genmsg    # ADDED AT THE LAST MINUTE
 )
 
 ## System dependencies are found with CMake's conventions
@@ -120,6 +121,12 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
+###################################################################################################
+# ADDED AT THE LAST MINUTE
+###################################################################################################
+add_executable(udpuserRos src/udpuserRos.c)
+target_link_libraries(udpuserRos $(catkin_LIBRARIES))
+add_dependencies(udpuserRos comms_generate_messages_cpp)
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/comms.cpp
